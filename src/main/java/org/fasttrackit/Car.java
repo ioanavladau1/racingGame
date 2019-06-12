@@ -1,17 +1,10 @@
 package org.fasttrackit;
 
-public class Car {
+import java.time.LocalDate;
 
-    String name;
+// inheritance or "is-a" relashionship
+public class Car extends AutoVehicle {
+
     int doorCount;
-    double mileage;
-    String color;
-    double maxSpeed;
-    boolean running;
-    double fluelLevel;
-    double travelDistsnce;
-
-    // "has-a" relationship
-    Engine engine;
 
 }
