@@ -13,6 +13,7 @@ public class App
         car.color = "blue";
         car.doorCount = 4;
         car.mileage = 9.5;
+        car.fluelLevel = 50;
         car.running = true;
 
         Engine engine = new Engine();
@@ -28,6 +29,7 @@ public class App
         car1.name = "Mercedes";
         car1.color = "black";
         car1.maxSpeed = 150.5;
+        car1.fluelLevel = 30;
         car1.running = false;
 
         Car car3 = car;
@@ -44,5 +46,16 @@ public class App
 
         System.out.println(car.maxSpeed);
         System.out.println(car.engine);
+
+
+        double distance = car.accelerate(60, 0.5);
+        distance = car.accelerate(60, 0.5);
+
+
+
+        System.out.println("Distance in App.main: " + distance);
+
+
+
     }
 }
