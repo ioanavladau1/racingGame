@@ -4,14 +4,78 @@ import java.time.LocalDate;
 
 public class Vehicle {
 
-    String name;
-    double mileage;
-    String color;
-    double maxSpeed;
-    boolean running;
-    double fluelLevel;
-    double travelDistance;
-    LocalDate createdDate;
+    private String name;
+    private double mileage;
+    private String color;
+    private double maxSpeed;
+    private boolean running;
+    private double fluelLevel;
+    private double travelDistance;
+    private LocalDate createdDate;
+
+    public String getName() {
+        return name;
+    }
+
+    public double getMileage() {
+        return mileage;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public double getMaxSpeed() {
+        return maxSpeed;
+    }
+
+    public boolean isRunning() {
+        return running;
+    }
+
+    public double getFluelLevel() {
+        return fluelLevel;
+    }
+
+    public double getTravelDistance() {
+        return travelDistance;
+    }
+
+    public LocalDate getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setName(String name) {
+        this.name = name.trim();
+    }
+
+    public void setMileage(double mileage) {
+        this.mileage = mileage;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setMaxSpeed(double maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
+
+    public void setRunning(boolean running) {
+        this.running = running;
+    }
+
+    public void setFluelLevel(double fluelLevel) {
+        this.fluelLevel = fluelLevel;
+    }
+
+    public void setTravelDistance(double travelDistance) {
+        this.travelDistance = travelDistance;
+    }
+
+    public void setCreatedDate(LocalDate createdDate) {
+        this.createdDate = createdDate;
+    }
 
     public double accelerate(double speed, double durationInHours) {
         //concatenation
@@ -34,12 +98,9 @@ public class Vehicle {
         fluelLevel-= spentFuel;
         System.out.println("Remaining fuel: " + fluelLevel + " 1");
 
-
-
-
-
-
         return distance;
+
+
     }
 
 }

@@ -12,13 +12,16 @@ public class App
         Engine engine = new Engine();
         engine.manufacturer = "Renault";
 
-        Car car = new Car(new Engine );
-        car.name = "Dacia";
-        car.color = "blue";
+        Car car = new Car(engine);
+
+
+
+        car.setName("Dacia");
+        car.setColor("blue");
         car.doorCount = 4;
-        car.mileage = 9.5;
-        car.fluelLevel = 50;
-        car.running = true;
+        car.setMileage(9.5);
+        car.setFluelLevel(50);
+        car.setRunning(true);
 
 
 
@@ -26,26 +29,26 @@ public class App
         System.out.println(car.engine.manufacturer);
 
 
-        Car car1 = new Car();
-        car1.name = "Mercedes";
-        car1.color = "black";
-        car1.maxSpeed = 150.5;
-        car1.fluelLevel = 30;
-        car1.running = false;
+        Car car1 = new Car(engine);
+        car1.setName("Mercedes");
+        car1.setColor("black");
+        car1.setMaxSpeed(150.5);
+        car1.setFluelLevel(30);
+        car1.setRunning(false);
 
         Car car3 = car;
 
-        System.out.println(car.name);
-        System.out.println(car3.name);
+        System.out.println(car.getName());
+        System.out.println(car3.getName());
 
         System.out.println("Changing values...");
 
-        car.name = "Dacia Logan";
+        car.setName("Dacia Logan");
 
-        System.out.println(car.name);
-        System.out.println(car3.name);
+        System.out.println(car.getName());
+        System.out.println(car3.getName());
 
-        System.out.println(car.maxSpeed);
+        System.out.println(car.getMaxSpeed());
         System.out.println(car.engine);
 
 
