@@ -8,7 +8,11 @@ public class App
 {
     public static void main( String[] args )
     {
-        Car car = new Car();
+
+        Engine engine = new Engine();
+        engine.manufacturer = "Renault";
+
+        Car car = new Car(new Engine );
         car.name = "Dacia";
         car.color = "blue";
         car.doorCount = 4;
@@ -16,10 +20,7 @@ public class App
         car.fluelLevel = 50;
         car.running = true;
 
-        Engine engine = new Engine();
-        engine.manufacturer = "Renault";
 
-        car.engine = engine;
 
         System.out.println("Our engine...");
         System.out.println(car.engine.manufacturer);
