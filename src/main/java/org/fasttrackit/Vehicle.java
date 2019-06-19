@@ -110,7 +110,11 @@ public class Vehicle {
 
         return distance;
 
+    }
 
+
+    public double accelerate(double speed){
+        return accelerate(speed,1);
     }
 
 }
