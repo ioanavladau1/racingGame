@@ -113,8 +113,37 @@ public class Vehicle {
     }
 
 
-    public double accelerate(double speed){
-        return accelerate(speed,1);
+    @Override
+    public int hashCode() {
+        return super.hashCode();
     }
 
+    public double accelerate(double speed){
+        return accelerate(speed,1);}
+
+        //Method signature must be the same, except:
+    // 1.co-variant return type
+// (returned olbject must inherit what the overridden method was returning)
+    // 2. Overridden method ca allow larger acces than was allowed in the super-class.
+
+    @Override
+    protected Vehicle clone() throws CloneNotSupportedException {
+        return new Vehicle();
+    }
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "name='" + name + '\'' +
+                ", mileage=" + mileage +
+                ", color='" + color + '\'' +
+                ", maxSpeed=" + maxSpeed +
+                ", running=" + running +
+                ", fluelLevel=" + fluelLevel +
+                ", travelDistance=" + travelDistance +
+                ", createdDate=" + createdDate +
+                '}';
+    }
 }
+
+
