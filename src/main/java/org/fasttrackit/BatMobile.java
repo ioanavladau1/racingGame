@@ -2,10 +2,7 @@ package org.fasttrackit;
 
 public class BatMobile extends Vehicle {
 
-    @Override
-    protected String clone() throws CloneNotSupportedException {
-        return null;
-    }
+
 
     @Override
     public double accelerate(double speed, double durationInHours) {
