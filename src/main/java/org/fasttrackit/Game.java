@@ -2,6 +2,7 @@ package org.fasttrackit;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Game {
@@ -14,16 +15,16 @@ public class Game {
         initializeTracks();
         displayTracks();
 
-        int competitorCount = 2;
-
-        for (int i=0; i< competitorCount; i++){
-        addcompetitor();}
+        int competitorCount = getCompetitorCountFromUser();
+        for (int i = 0; i < competitorCount; i++) {
+            addcompetitor();
+        }
         displayCompetitors();
     }
 
     private void addcompetitor() {
         Vehicle vehicle = new Vehicle();
-        vehicle.setName("Test");
+        vehicle.setName(getVehcleNameFromUser());
         vehicle.setFluelLevel(60);
         vehicle.setMaxSpeed(200);
         vehicle.setMileage(ThreadLocalRandom.current().nextDouble(4.5, 20));
@@ -31,12 +32,23 @@ public class Game {
         competitors.add(vehicle);
     }
 
+    private String getVehcleNameFromUser(){
+        System.out.println(" Please enter vehicle name ");
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextLine();
+    }
+
+    private int getCompetitorCountFromUser(){
+        System.out.println("Please enter vehicle count:");
+        Scanner scanner =new Scanner(System.in);
+        return scanner.nextInt();
+    }
     private void displayCompetitors() {
         System.out.println("Today's competitors are:");
 
         for (int i = 0; i < competitors.size(); i++) {
             if (competitors.get(i) != null) {
-                System.out.println(competitors.get(i).getName());
+                System.out.println(competitors.get(i).getName()+ "- mileage: " + competitors.get(i).getMileage());
             }
         }
     }
